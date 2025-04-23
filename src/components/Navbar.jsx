@@ -22,10 +22,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar fixed top-0 left-0 w-full flex justify-between items-center p-4 shadow-md bg-white z-50">
+    <div className="navbar fixed top-0 left-0 w-full flex justify-between items-center p-4 shadow-md bg-white z-50 dark:bg-[#2a4060] z-50">
       <div className="flex items-center gap-2">
         <img className="w-10" src={logo} alt="Logo" />
-        <p className="text- text-lg md:text-2xl font-semibold">
+        <p className="text- text-lg md:text-2xl font-semibold transition">
           Shopper's Stop
         </p>
       </div>
@@ -108,7 +108,7 @@ const Navbar = () => {
           <Link to="/">
             <button
               onClick={() => setMenu("shop")}
-              className={`text- ${menu === "shop" ? "font-bold" : ""} hover:bg-black hover:text-white`}
+              className={`text- ${menu === "shop" ? "font-bold" : ""} hover:bg-black hover:text-white w-full px-[8px] py-[8px] rounded-[8px] text- font-medium`}
             >
               Shop
             </button>
@@ -116,7 +116,7 @@ const Navbar = () => {
           <Link to="/men">
             <button
               onClick={() => setMenu("men")}
-              className={`text- ${menu === "men" ? "font-bold" : ""}hover:bg-black hover:text-white`}
+              className={`text- ${menu === "men" ? "font-bold" : ""}hover:bg-black hover:text-white w-full px-[8px] py-[8px] rounded-[8px] text- font-medium`}
             >
               Men
             </button>
@@ -124,7 +124,7 @@ const Navbar = () => {
           <Link to="/kids">
             <button
               onClick={() => setMenu("kids")}
-              className={`text- ${menu === "kids" ? "font-bold" : ""}hover:bg-black hover:text-white`}
+              className={`text- ${menu === "kids" ? "font-bold" : ""}hover:bg-black hover:text-white w-full px-[8px] py-[8px] rounded-[8px] text- font-medium`}
             >
               Kids
             </button>
@@ -132,21 +132,21 @@ const Navbar = () => {
           <Link to="/women">
             <button
               onClick={() => setMenu("women")}
-              className={`text- ${menu === "women" ? "font-bold" : ""}hover:bg-black hover:text-white`}
+              className={`text- ${menu === "women" ? "font-bold" : ""}hover:bg-black hover:text-white w-full px-[8px] py-[8px] rounded-[8px] text- font-medium`}
             >
               Women
             </button>
           </Link>
         </div>
         <Link to="/login">
-          <button className="px-4 py-2 bg-transparent text- font-semibold rounded-lg border border-gray-400 hover:bg-black hover:text-white transition duration-300 ease-in-out">
+          <button className="px-4 py-2 bg-transparent text- font-semibold rounded-lg border border-gray-400 hover:bg-black hover:text-white  ease-in-out">
             Login
           </button>
         </Link>
         <Link to="/cart">
           <ShoppingCartIcon fontSize="large"/>
         </Link>
-        <div className="flex justify-center items-center w-5 h-5 mt-[-10px] ml-[-25px] text-xs rounded-full bg-[#FF4141] text">
+        <div className="flex justify-center items-center w-5 h-5 mt-[-10px] ml-[-25px] text-xs rounded-full bg-[#FF4141]">
           {getTotalCartItems()}
         </div>
       </div>
